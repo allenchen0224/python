@@ -21,4 +21,3 @@
 
 dic = {x:x*2 for x in [3,4,5]} #從列表的資料產生字典
 print(dic)
-
