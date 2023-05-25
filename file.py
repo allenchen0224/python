@@ -15,6 +15,11 @@
 import json
 with open('config.json',mode='r',encoding='big5') as file:
     data = json.load(file)
-print(data)
+print(data) #data是一個字典
+data['name']='New Name' #修改變數中的資料
 # print('name:',data['name'])
 # print('version:',data['version'])
+
+#把最新的資料複寫回檔案中
+with open('config.json',mode='w') as file:
+    json.dump(data, file)
