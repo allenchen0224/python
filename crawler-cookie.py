@@ -1,5 +1,7 @@
 #抓取PTT八卦版的網頁原始碼 (HTML)
 import urllib.request as req
+import ssl 
+ssl._create_default_https_context = ssl._create_unverified_context
 def getData(url):
 
 # url = 'https://www.ptt.cc/bbs/Gossiping/index.html'
@@ -18,14 +20,16 @@ def getData(url):
     titles = root.find_all('div',class_='title') #尋找class='title的div標籤
     for title in titles:
         if title.a != None:
-            print(title.a.string)  #如果標題包含a標籤 (沒有被刪除) 印出來
+            print(title.a.string,'https://www.ptt.cc/'+title.a['href'])  #如果標題包含a標籤 (沒有被刪除) 印出來
     #抓取上一頁的連結
     nextLink = root.find('a',string='‹ 上頁') #找到內文是‹ 上頁的a 標籤
     return (nextLink['href'])
 
 #主程序:抓取多個頁面的標題
-pageURL = 'https://www.ptt.cc/bbs/Gossiping/index.html'
+# pageURL = 'https://www.ptt.cc/bbs/Gossiping/index.html'
+goal = input('請輸入：')
+pageURL = 'https://www.ptt.cc/bbs/Gossiping/search?q='+goal
 count = 0
-while count <5:
+while count <3:
     pageURL = 'https://www.ptt.cc'+getData(pageURL)
     count+=1
