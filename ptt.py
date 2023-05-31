@@ -10,10 +10,11 @@ for i in a:
     list.append(i.text)
 
 b= input('請輸入欲查詢的分類：')
-if b in list:
-    b = b
-else:
+
+while b not in list:
     b = input('請重新輸入欲查詢的分類：')
+else:
+    b = b
     
 r = requests.get('https://www.ptt.cc/bbs/'+b+'/index.html',headers={'cookie':'over18=1'})
 soup1 = BeautifulSoup(r.text,'html.parser')
