@@ -24,4 +24,4 @@ data = pd.Series(['您好','Python','Pandas'])
 # print(data.str.len()) ＃算出每個字串的長度
 # print(data.str.cat(sep='：')) #把字串串起來 可以自訂串接的符號
 # print(data.str.contains('好')) #判斷每個字串是否包含特定字元
-print(data.str.replace('您好','Hello'))
+# print(data.str.replace('您好','Hello')) #
