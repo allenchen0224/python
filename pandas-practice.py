@@ -15,4 +15,4 @@ data = pd.DataFrame({'name':['Amy','John','Bob'],'salary':[30000,50000,40000]})
 # print(data['salary'])
 print(data)
 print('==========')
-print(data.iloc[1]) #印出第一列
+print(data.iloc[1]) #印出第二列
