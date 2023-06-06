@@ -41,8 +41,19 @@ import matplotlib.pyplot as plt
 # predicted_weights = lm.predict(new)
 # print(predicted_weights)
 
-from sklearn import datasets
-# boston = datasets.load_boston()
-# print(boston.keys())
-diabetes = datasets.load_diabetes()
-print(diabetes.keys())
+# from sklearn import datasets
+# # boston = datasets.load_boston()
+# # print(boston.keys())
+# diabetes = datasets.load_diabetes()
+# print(diabetes.keys())
+
+# x = pd.DataFrame(diabetes.data,columns=diabetes.feature_names)
+# print(x.head())
+
+import random
+# for i in range(5):
+#     print(random.randint(1,100))
+
+random.seed(101)
+for i in range(5):
+    print(random.randint(1,100))
