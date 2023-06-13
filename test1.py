@@ -77,9 +77,19 @@ import numpy as np
 # plt.hist(x,color='red',width=0.8)
 # plt.show()
 
-y = np.array([35,25,25,15])
-a = ['apple','banana','cherries','watermeleon']
-b = [0.3,0.2,0,0]
-plt.pie(y,labels=a,startangle=90,explode=b,shadow=True,autopct='%.1f%%') #startangle起始角度 explode 拉開多少 shadow 陰影
-plt.legend(title='Four Fruits:',loc = 'lower right') #圖例 
-plt.show()
+# y = np.array([35,25,25,15])
+# a = ['apple','banana','cherries','watermeleon']
+# b = [0.3,0.2,0,0]
+# plt.pie(y,labels=a,startangle=90,explode=b,shadow=True,autopct='%.1f%%') #startangle起始角度 explode 拉開多少 shadow 陰影
+# plt.legend(title='Four Fruits:',loc = 'lower right') #圖例 
+# plt.show()
+
+import statistics
+a = [1,2,3,4,4,4,5,6,7,8,8,8,8,8,8]
+
+x = statistics.mode(a) #眾數
+y = statistics.stdev(a) #標準差
+z = statistics.variance(a) #變異數
+print(x)
+print(y)
+print(z)
