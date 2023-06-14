@@ -84,12 +84,47 @@ import numpy as np
 # plt.legend(title='Four Fruits:',loc = 'lower right') #圖例 
 # plt.show()
 
-import statistics
-a = [1,2,3,4,4,4,5,6,7,8,8,8,8,8,8]
+# import statistics
+# a = [1,2,3,4,4,4,5,6,7,8,8,8,8,8,8]
 
-x = statistics.mode(a) #眾數
-y = statistics.stdev(a) #標準差
-z = statistics.variance(a) #變異數
-print(x)
-print(y)
-print(z)
+# x = statistics.mode(a) #眾數
+# y = statistics.stdev(a) #標準差
+# z = statistics.variance(a) #變異數
+# print(x)
+# print(y)
+# print(z)
+
+# x= 'awesome'
+# def myfunc():
+#     print('Python is '+x)
+# myfunc()
+
+# print('Python is '+x)
+
+# def myfunc():
+#     global x
+#     x = 'fantastic'
+# myfunc()
+
+# print('Python is '+x)
+
+# a = 'hello'
+# # print(txt.lower())
+# b = 'world'
+# # b = a.strip()
+# print(a+' '+b)
+
+# import random 
+# num = random.randint(1,3)
+# answer = eval(input('請猜數字1~3:'))
+# while num != answer:
+#     answer = eval(input('請猜數字1~3:'))
+#     print(num ,'==',answer,'is',num==answer)
+
+
+def cal(x,y):
+    div = x//y
+    mod = x%y
+    return div,mod
+a,b = cal(120,7)
+print('120除7的傷數為:',a,'餘數為:',b)
