@@ -143,57 +143,65 @@ a = 0
 # elif s[0] =='M':
 #     a += 1000
 
-for i in range(len(s)):
-    if s[i] =='M':
-        a +=1000
-    elif s[i] != 'M':
-        break
+# for i in range(len(s)):
+#     if s[i] =='M':
+#         a +=1000
+#     elif s[i] != 'M':
+#         break
     
-for j in range(len(s)):
-    if s[j] != 'M' and s[j] !='D' and s[j] !='C':
-        break
-    elif s[j] =='D':
-        a+=500
-    elif s[j-1] =='C' and s[j]=='M':
-        a+=900
-    elif s[j-1] =='C' and s[j] =='D':
-        a+=400
-    elif s[j-1] =='C' and s[j] !='M':
-        a+=100
+# for j in range(len(s)):
+#     if s[j] != 'M' and s[j] !='D' and s[j] !='C':
+#         break
+#     elif s[j] =='D':
+#         a+=500
+#     elif s[j-1] =='C' and s[j]=='M':
+#         a+=900
+#     elif s[j-1] =='C' and s[j] =='D':
+#         a+=400
+#     elif s[j-1] =='C' and s[j] !='M':
+#         a+=100
 
-for k in range(len(s)):
-    if s[k] != 'M' and s[k] !='D' and s[k] !='C' and s[k] !='X' and s[k] !='L':
-        break
-    elif s[k-1] =='X' and s[k] =='C':
-        a +=90
-    elif s[k-1] =='X' and s[k] =='L':
-        a +=40
-    elif s[k] =='L':
-        a +=50
-    elif s[k] =='X':
-        a+=10
+# for k in range(len(s)):
+#     if s[k] != 'M' and s[k] !='D' and s[k] !='C' and s[k] !='X' and s[k] !='L':
+#         break
+#     elif s[k-1] =='X' and s[k] =='C':
+#         a +=90
+#     elif s[k-1] =='X' and s[k] =='L':
+#         a +=40
+#     elif s[k] =='L':
+#         a +=50
+#     elif s[k-1] =='X' and s[k] !='C':
+#         a+=10
 
-for l in range(len(s)):
-    if s[l-1] =='I' and s[l] =='X':
-        a+=9
-    elif s[l-1] =='I' and s[l] =='V':
-        a+=4
-    elif s[l-1] !='I' and s[l] =='V':
-        a+=5
-    elif s[l-1] =='I':
-         a+=1
-# if s[-1] =='I':
-#     a+=1
-# elif s[-1] =='V':
-#     a+=5
-# elif s[-1] =='X':
-#     a+=5
-# elif s[-1] =='L':
-#     a+=5
-# elif s[-1] =='C':
-#     a+=5
-# elif s[-1] =='D':
-#     a+=500
+# for l in range(len(s)):
+#     if s[l-1] =='I' and s[l] =='X':
+#         a+=9
+#     elif s[l-1] =='I' and s[l] =='V':
+#         a+=4
+#     elif s[l-1] !='I' and s[l] =='V':
+#         a+=5
+#     elif s[l-1] =='I':
+#          a+=1
+# # if s[-1] =='I':
+# #     a+=1
+# # elif s[-1] =='V':
+# #     a+=5
+# # elif s[-1] =='X':
+# #     a+=5
+# # elif s[-1] =='L':
+# #     a+=5
+# # elif s[-1] =='C':
+# #     a+=5
+# # elif s[-1] =='D':
+# #     a+=500
 
-print(a)
+# print(a)
 
+import pandas as pd
+ss1 = pd.Series([4,7,-5,3], index = ['a','b','c','d'])
+
+print(ss1.index)
+print(ss1['a'])
+print('a' in ss1)
+print(7 in ss1)
+print(7 in ss1.values)
